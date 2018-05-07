@@ -2,7 +2,6 @@ package com.filminterpolator;
 
 
 
-
 public class FilmInterpolator {
 
     public static void main(String[] args) {

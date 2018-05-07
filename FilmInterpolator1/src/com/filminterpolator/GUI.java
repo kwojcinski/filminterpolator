@@ -40,23 +40,11 @@ public class GUI {
         JFileChooser chooser;
         String choosertitle;
 
-        private static int noFPS = 2;
-        static String inputdirpath;
-        static String outputdirpath;
+
         private boolean flag = false;
 
 
-        public static int getNoFPS() {
-        return noFPS;
-        }
 
-        public static String getInputdirpath() {
-            return inputdirpath;
-        }
-
-        public static String getOutputdirpath() {
-            return outputdirpath;
-        }
         GUI() {
     }
     public boolean openInterfaceWindow() {
@@ -82,6 +70,10 @@ public class GUI {
                 flag = true;
                 Interpolator Inter = new Interpolator();
                 Inter.processFilm();
+                System.out.println("NoFPS = " + Options.getSingleton().getFPSvalue());
+                System.out.println("Number of Added frame = " + Options.getSingleton().getNumberOfAddedFrames());
+                System.out.println("Input Path = " + Options.getSingleton().getInputDirectoryPath());
+                System.out.println("Output Path = " + Options.getSingleton().getOutputDirectoryPath());
                 guiFrame.dispose();
             }
         });
@@ -125,6 +117,7 @@ public class GUI {
         pan3.add(lbl3);
         pan3.add(outputDIR);
         pan3.add(go);
+        Options.getSingleton().setFPSvalue(2);
 
 
         guiFrame.add(pan, BorderLayout.NORTH);
@@ -139,30 +132,30 @@ public class GUI {
         //Register a listener for the radio buttons.
         FPS2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                noFPS = 2;
+                Options.getSingleton().setFPSvalue(2);
 
             }
         });
         FPS3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                e.getSource().equals(FPS2);
-                noFPS = 3;
+                //e.getSource().equals(FPS2);
+                Options.getSingleton().setFPSvalue(3);
             }
         });
         FPS4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                noFPS = 4;
+                Options.getSingleton().setFPSvalue(4);
             }
         });
         FPS5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                noFPS = 5;
+                Options.getSingleton().setFPSvalue(5);
                 //System.out.println(noFPS);
             }
         });
         FPS6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                noFPS = 6;
+                Options.getSingleton().setFPSvalue(6);
             }
 
 
@@ -202,12 +195,12 @@ public class GUI {
                     System.out.println("getSelectedFile() : "
                             +  chooser.getSelectedFile());
                     if(io == 'i') {
-                        inputdirpath = chooser.getSelectedFile().getAbsolutePath();
-                        System.out.println(inputdirpath);
+                        Options.getSingleton().setInputDirectoryPath(chooser.getSelectedFile().getAbsolutePath());
+                        System.out.println(Options.getSingleton().getInputDirectoryPath());
                     }
                     else {
-                        outputdirpath = chooser.getSelectedFile().getAbsolutePath();
-                        System.out.println(outputdirpath);
+                        Options.getSingleton().setOutputDirectoryPath(chooser.getSelectedFile().getAbsolutePath());
+                        System.out.println(Options.getSingleton().getOutputDirectoryPath());
                     }
                 }
                 else {
