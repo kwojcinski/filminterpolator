@@ -9,7 +9,7 @@ public class Interpolator {
     public boolean processFilm()
     {
         Options interpolationOptions;
-        interpolationOptions=Options.getSingleton();
+        interpolationOptions=UserInterface.getOptions();
 
         int filmFrames = IOManager.countFrames(interpolationOptions.inputDirectoryPath);
 

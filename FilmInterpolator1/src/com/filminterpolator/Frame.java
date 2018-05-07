@@ -28,8 +28,18 @@ public class Frame {
 
         return true;
     }
-    Frame(int newIndex, String newName)
-    {
+    Frame(BufferedImage image) {
+        this.image = image;
+    }
+    Frame(int newIndex, String newName) {
+        this.index = newIndex;
+        this.name = newName;
+        System.out.println("Creating new frameeeeee! (" + newIndex + ")");
+    }
+    Frame(int newIndex, String newName, BufferedImage img) {
+        this.index = newIndex;
+        this.name = newName;
+        this.image = img;
         System.out.println("Creating new frameeeeee! (" + newIndex + ")");
     }
 }
