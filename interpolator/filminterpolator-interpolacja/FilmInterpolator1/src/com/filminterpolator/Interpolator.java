@@ -1,5 +1,6 @@
 package com.filminterpolator;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Interpolator {
@@ -48,7 +49,13 @@ public class Interpolator {
         }
 
         return true;*/
-        int filecount = IOManager.countFrames(Options.getSingleton().inputDirectoryPath);
+        Options options = Options.getSingleton();
+        int filecount = IOManager.countFrames(options.inputDirectoryPath);
+        if(filecount <= 1) {
+            System.out.println("Nie ma co Interpolować");
+            return false;
+        }
+
 
         switch (Options.getSingleton().getFPSvalue()){
             case 1:

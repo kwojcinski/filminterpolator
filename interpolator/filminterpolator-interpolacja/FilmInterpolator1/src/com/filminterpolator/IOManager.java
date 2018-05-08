@@ -20,9 +20,14 @@ public abstract class IOManager {
     }
     public static int countFrames(String path){
         File directory =  new File(path);
-        int fileCount =  directory.list().length;
-        System.out.println("File count = " + fileCount);
-        return fileCount;
+        try {
+            int fileCount = directory.list().length;
+            System.out.println("File count = " + fileCount);
+            return fileCount;
+        } catch (Exception e) {
+            System.out.println("Wrong Directory");
+        }
+        return 0;
     }
 
 }
