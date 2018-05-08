@@ -8,7 +8,7 @@ public abstract class IOManager {
     boolean loadFrame(){
         return true;
     }
-    boolean saveFrame(Frame frame){
+    static boolean saveFrame(Frame frame){
         File outputfile = new File(Options.getSingleton().getOutputDirectoryPath());
 
         try {
@@ -19,7 +19,10 @@ public abstract class IOManager {
         return true;
     }
     public static int countFrames(String path){
-        return 0;
+        File directory =  new File(path);
+        int fileCount =  directory.list().length;
+        System.out.println("File count = " + fileCount);
+        return fileCount;
     }
 
 }

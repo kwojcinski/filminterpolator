@@ -1,12 +1,14 @@
 package com.filminterpolator;
 
+import java.util.ArrayList;
+
 public class Interpolator {
     Options InterpolationOptions;
     Frame sourceFrame_a;
     Frame sourceFrame_b;
     Frame outputFrame;
 
-    public boolean processFilm()
+    public static boolean processFilm()
     {
         /*Options interpolationOptions;
         interpolationOptions=Options.getSingleton();
@@ -46,6 +48,15 @@ public class Interpolator {
         }
 
         return true;*/
+        int filecount = IOManager.countFrames(Options.getSingleton().inputDirectoryPath);
+
+        switch (Options.getSingleton().getFPSvalue()){
+            case 1:
+
+        }
+
+
+        return true;
     }
 
     private int calculateIndexes(int frame1)
@@ -53,5 +64,6 @@ public class Interpolator {
         int frame2=frame1*2;
         return frame2;
     }
+
 
 }

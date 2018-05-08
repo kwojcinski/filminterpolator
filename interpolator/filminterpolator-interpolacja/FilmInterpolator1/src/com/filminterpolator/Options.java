@@ -5,6 +5,7 @@ public class Options {
     int numberOfAddedFrames;
     String inputDirectoryPath;
     String outputDirectoryPath;
+    String filename;
     static Options InstanceOf;
 
     private Options(int FPSvalue, int numberOfAddedFrame, String inputDirectoryPath, String outputDirectoryPath) {
@@ -71,5 +72,13 @@ public class Options {
 
     public void setOutputDirectoryPath(String outputDirectoryPath) {
         this.outputDirectoryPath = outputDirectoryPath;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }
