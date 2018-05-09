@@ -1,6 +1,5 @@
 package com.filminterpolator;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class Interpolator {
@@ -11,60 +10,38 @@ public class Interpolator {
 
     public static boolean processFilm()
     {
-        /*Options interpolationOptions;
-        interpolationOptions=Options.getSingleton();
-
-        int filmFrames = IOManager.countFrames(interpolationOptions.inputDirectoryPath);
-
-        int noSourceFrame_a = 1;
-        int noSourceFrame_b = 2;
-
-        int noOutputFrame_new=calculateIndexes(noSourceFrame_a);
-        int noOutputFrame_a = noOutputFrame_new - 1;
-        int noOutputFrame_b = noOutputFrame_new + 1;
-
-        sourceFrame_a = new Frame(noSourceFrame_a, interpolationOptions.readPath('i'));
-        sourceFrame_b = new Frame(noSourceFrame_b, interpolationOptions.readPath('i'));
-
-        outputFrame = new Frame(noOutputFrame_new, ImageProcessor.processImage(sourceFrame_a.getImage(), sourceFrame_b.getImage()));
-
-        sourceFrame_a.saveFrame();
-        outputFrame.saveFrame();
-        sourceFrame_b.saveFrame();
-
-        //MAIN LOOP
-        while(noSourceFrame_a<interpolationOptions.readNumberOfFrames())
-        {
-            noSourceFrame_a = noSourceFrame_b;
-            noOutputFrame_new = calculateIndexes(noSourceFrame_a);
-            noOutputFrame_a = noOutputFrame_new - 1;
-            noOutputFrame_b = noOutputFrame_new + 1;
-
-            sourceFrame_a = sourceFrame_b;
-            sourceFrame_b = new Frame(noOutputFrame_new, interpolationOptions.readPath('i'));
-            outputFrame = ImageProcessor.processImage(noOutputFrame_new, interpolationOptions.readPath('o'), sourceFrame_a, sourceFrame_b);
-
-            outputFrame.saveFrame();
-            sourceFrame_b.saveFrame();
-        }
-
-        return true;*/
         Options options = Options.getSingleton();
-        int filecount = IOManager.countFrames(options.inputDirectoryPath);
-        ArrayList<String> filetitles =  new ArrayList<>();
-        int outputfilecount = (filecount + (filecount-1)*options.getFPSvalue());
-        //System.out.println(outputfilecount); Debugging only
-        for(int i = 1; i < outputfilecount+1; i++) {
-            filetitles.add(options.getFilename()+"output"+String.valueOf(i));
-            //System.out.println(filetitles.get(i-1)); Debugging only
+
+        int fileCount = IOManager.countFrames(options.inputDirectoryPath);
+        int outputFilecount = (fileCount + (fileCount - 1) * options.getFPSvalue());
+
+        ArrayList<String> fileTitles =  new ArrayList<>();
+        ArrayList<Frame> tempFrames = new ArrayList<>();
+
+
+        for(int i = 1; i < outputFilecount+1; i++) {
+            fileTitles.add(options.getFilename() + "" + String.valueOf(i));
+            System.out.println(fileTitles.get(i-1));
         }
-        if(filecount <= 1) {
+        if(fileCount <= 1) {
             System.out.println("Nie ma co Interpolować");
             return false;
         }
 
+        for(int i = 0; i < fileCount-1; i++){
+            tempFrames.add(IOManager.loadFrame(i)); //First Frame
+            tempFrames.add(IOManager.loadFrame(i+1));
 
+            for(int j = 0; j < options.getFPSvalue(); j++){
+
+<<<<<<< HEAD
         switch (Options.getSingleton().getFPSvalue()){
+=======
+            }
+            tempFrames.clear();
+        }
+        /*switch (Options.getSingleton().getFPSvalue()){
+>>>>>>> c130f9a39e1758b6b6699d4d5858ba9e10a95550
             case 1:
 
         }
@@ -73,11 +50,6 @@ public class Interpolator {
         return true;
     }
 
-    private int calculateIndexes(int frame1)
-    {
-        int frame2=frame1*2;
-        return frame2;
-    }
 
 
 }
