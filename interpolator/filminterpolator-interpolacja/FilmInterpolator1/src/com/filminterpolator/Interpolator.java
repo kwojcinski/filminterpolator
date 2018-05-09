@@ -64,10 +64,10 @@ public class Interpolator {
         }
 
 
-        /*switch (Options.getSingleton().getFPSvalue()){
+        switch (Options.getSingleton().getFPSvalue()){
             case 1:
 
-        }*/
+        }
 
 
         return true;

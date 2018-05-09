@@ -2,6 +2,7 @@ package com.filminterpolator;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.util.ArrayList;
 
 public abstract class IOManager {
 
@@ -9,7 +10,7 @@ public abstract class IOManager {
         return true;
     }
     static boolean saveFrame(Frame frame){
-        File outputfile = new File(Options.getSingleton().getOutputDirectoryPath());
+        File outputfile = new File(Options.getSingleton().getOutputDirectoryPath() + "//" + frame.getName());
 
         try {
             ImageIO.write(frame.getImage(),"png", outputfile);
