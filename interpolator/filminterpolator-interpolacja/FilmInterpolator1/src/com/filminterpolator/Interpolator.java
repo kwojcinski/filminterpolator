@@ -51,16 +51,23 @@ public class Interpolator {
         return true;*/
         Options options = Options.getSingleton();
         int filecount = IOManager.countFrames(options.inputDirectoryPath);
+        ArrayList<String> filetitles =  new ArrayList<>();
+        int outputfilecount = (filecount + (filecount-1)*options.getFPSvalue());
+        //System.out.println(outputfilecount); Debugging only
+        for(int i = 1; i < outputfilecount +1; i++) {
+            filetitles.add(options.getFilename()+"output"+String.valueOf(i));
+            //System.out.println(filetitles.get(i-1)); Debugging only
+        }
         if(filecount <= 1) {
             System.out.println("Nie ma co Interpolować");
             return false;
         }
 
 
-        switch (Options.getSingleton().getFPSvalue()){
+        /*switch (Options.getSingleton().getFPSvalue()){
             case 1:
 
-        }
+        }*/
 
 
         return true;
