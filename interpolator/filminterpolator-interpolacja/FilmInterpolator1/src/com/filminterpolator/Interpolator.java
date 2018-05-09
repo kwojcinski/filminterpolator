@@ -54,7 +54,7 @@ public class Interpolator {
         ArrayList<String> filetitles =  new ArrayList<>();
         int outputfilecount = (filecount + (filecount-1)*options.getFPSvalue());
         //System.out.println(outputfilecount); Debugging only
-        for(int i = 1; i < outputfilecount +1; i++) {
+        for(int i = 1; i < outputfilecount+1; i++) {
             filetitles.add(options.getFilename()+"output"+String.valueOf(i));
             //System.out.println(filetitles.get(i-1)); Debugging only
         }

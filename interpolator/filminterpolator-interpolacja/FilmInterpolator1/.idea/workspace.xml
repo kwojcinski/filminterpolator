@@ -50,18 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageProcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/ImageProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/Options.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpolator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interpolator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/Interpolator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+            <state relative-caret-position="238">
+              <caret line="54" column="80" lean-forward="true" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IOManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/IOManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
@@ -117,6 +105,18 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#141#142#0" expanded="true" />
                 <element signature="e#168#169#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/ImageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -297,12 +297,12 @@
       <workItem from="1525802549560" duration="3736000" />
       <workItem from="1525809082948" duration="2662000" />
       <workItem from="1525858349323" duration="942000" />
-      <workItem from="1525866924476" duration="606000" />
+      <workItem from="1525866924476" duration="1184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51422000" />
+    <option name="totallyTimeSpent" value="52000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -843,6 +843,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/Interpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="54" column="80" lean-forward="true" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/ImageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -861,16 +871,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#141#142#0" expanded="true" />
             <element signature="e#168#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/filminterpolator/Interpolator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
